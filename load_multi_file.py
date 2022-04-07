@@ -41,7 +41,9 @@ df_num_of_cols = len(files[0].columns)
     
 chunknum = math.floor(2100/df_num_of_cols)
 
+conn= conection()
+
 for file in files:
     
-    file.to_sql("name_table",con= conection(),index=False,schema="dbo",if_exists='append', chunksize=chunknum,method='multi')
+    file.to_sql("name_table",con= conn,index=False,schema="dbo",if_exists='append', chunksize=chunknum,method='multi')
 
