@@ -1,0 +1,3 @@
+SQLAlchemy==1.4.35
+pyodbc==4.0.32
+pandas==1.4.1
